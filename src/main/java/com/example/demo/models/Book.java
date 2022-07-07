@@ -1,14 +1,13 @@
 package com.example.demo.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name="tblBook")
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable = false, length = 500)
     private Long id;
     private String name;
     private Long type;
